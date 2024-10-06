@@ -99,6 +99,7 @@ print("----------------------------------------")
 
 # Sort dictionary by length (key)
 for length in sorted(word_len_dic):
+    
     # Get count per current key - length
     count = word_len_dic[length]
     
