@@ -5,7 +5,7 @@ projekt_2.py: druhý projekt do Engeto Online Python Akademie
 author: Samuel Wlaschinsky
 
 email: wlaschinsky.samuelr@gmail.com
-email: samuel.wlaschinsky@daktela.com
+email_2: samuel.wlaschinsky@daktela.com
 
 discord: samuel_qa
 
