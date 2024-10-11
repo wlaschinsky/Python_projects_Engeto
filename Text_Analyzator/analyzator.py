@@ -7,7 +7,7 @@ projekt_1.py: první projekt do Engeto Online Python Akademie
 author: Samuel Wlaschinsky
 
 email: wlaschinsky.samuel@gmail.com
-email2: samuel.wlaschinsky@daktela.com
+email_2: samuel.wlaschinsky@daktela.com
 
 discord: samuel_qa
 
