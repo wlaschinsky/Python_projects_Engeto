@@ -6,8 +6,6 @@ Program musí splňovat tyto požadavky:
     Na úvod si svůj soubor popiš hlavičkou, ať se s tebou můžeme snadněji spojit:
     Ukázka kódu1
 
-ZKOPÍROVAT KÓD
-
 """
 
 projekt_2.py: druhý projekt do Engeto Online Python Akademie
