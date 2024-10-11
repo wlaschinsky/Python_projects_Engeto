@@ -10,9 +10,32 @@ A program that analyzes a given text and provides statistics like:
 - Number of titlecase, uppercase, and lowercase words
 - Count and sum of numeric values in the text
 
-### 2. Other Projects
-Additional projects will be added...
+### 2. Cow and Bull Game
+
+The "Cow and Bull" game is a number guessing game where the user tries to guess a 4-digit secret number. For each guess, the program provides feedback in terms of:
+
+- **Cows**: The number of digits guessed correctly in both number and position.
+- **Bulls**: The number of digits guessed correctly, but in the wrong position.
+
+#### Game Flow:
+
+1. The program generates a random 4-digit number.
+2. The user makes guesses.
+3. After each guess, the program returns:
+    - The number of cows (correct digit and position).
+    - The number of bulls (correct digit but wrong position).
+4. The game continues until the user guesses the secret number correctly (i.e., 4 cows).
+
+#### Skills Practiced:
+
+- Loops and conditional statements
+- Working with random numbers
+- String and list manipulations
+- Input validation and error handling
 
 ---
 
 Feel free to explore and review the code.
+
+Additional projects will be added in the future.
+---
