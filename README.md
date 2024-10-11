@@ -26,13 +26,6 @@ The "Cow and Bull" game is a number guessing game where the user tries to guess 
     - The number of bulls (correct digit but wrong position).
 4. The game continues until the user guesses the secret number correctly (i.e., 4 cows).
 
-#### Skills Practiced:
-
-- Loops and conditional statements
-- Working with random numbers
-- String and list manipulations
-- Input validation and error handling
-
 ---
 
 Feel free to explore and review the code.
