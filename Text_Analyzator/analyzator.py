@@ -103,10 +103,7 @@ for length in sorted(word_len_dic):
     # Get count per current key - length
     count = word_len_dic[length]
     
-    # Create stars for graph
-    stars = '*' * count
-    
-    # Print graph
-    print(length, '|', stars, '|', count)
+    # Create graph through f-string - new way with formatting
+    print(f"{length:>3}|{'*' * count:<20}|{count}")
     
     
