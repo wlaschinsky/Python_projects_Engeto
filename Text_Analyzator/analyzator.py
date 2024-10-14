@@ -57,7 +57,7 @@ numeric_strings = []
 for word in words:
     if word.istitle():
         title_words += 1
-    if word.isupper():
+    if word.isupper() and word.isalpha():
         upper_words += 1
     if word.islower():
         lower_words += 1
