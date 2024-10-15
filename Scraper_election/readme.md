@@ -32,7 +32,8 @@ Steps to set up a virtual environment and install dependencies:
 
 * The script requires two arguments to run properly:
 
-   * The URL of the region for which you want to download the results (e.g., results for the Louny region).
+    * The URL of the region for which you want to download the results (e.g., results for the Louny region). You can choose the region from [this link](https://www.volby.cz/pls/ps2021/ps3?xjazyk=CZ), click on the "X" next to the region, and use the URL of the resulting page.
+      
     * The name of the output file in .csv format where the results will be saved. If the file does not exist, the script will create it with the specified name.
 
 * Example of running the script:
