@@ -1,3 +1,16 @@
+"""
+
+projekt_3.py: třetí projekt do Engeto Online Python Akademie
+
+author: Samuel Wlaschinsky
+
+email: wlaschinsky.samuelr@gmail.com
+email: samuel.wlaschinsky@daktela.com
+
+discord: samuel_qa
+
+"""
+
 import sys
 import bs4
 import requests
