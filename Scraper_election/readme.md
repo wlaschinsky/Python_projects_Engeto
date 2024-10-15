@@ -38,7 +38,7 @@ Steps to set up a virtual environment and install dependencies:
 
 * Example of running the script:
     ```bash
-    python scraper_elections.py  "https://www.volby.cz/pls/ps2021/ps32?xjazyk=CZ&xkraj=6&xnumnuts=4204" "vysledky_louny".csv
+    python scraper_elections.py  "https://www.volby.cz/pls/ps2021/ps32?xjazyk=CZ&xkraj=6&xnumnuts=4204" "vysledky_louny.csv"
 
 * The script will download the results for the Louny region from the provided URL, and the results will be saved in the vysledky_louny.csv file.
 
