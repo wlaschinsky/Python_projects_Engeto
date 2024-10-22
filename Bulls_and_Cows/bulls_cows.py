@@ -134,11 +134,6 @@ def play_bulls_and_cows():
             cow_text = "cow"  
         else:
             cow_text = "cows" 
-            
-    
-        # # Define the text for the number of bulls and cows
-        # bull_text = "bull" if bulls == 1 else "bulls"
-        # cow_text = "cow" if cows == 1 else "cows"
 
         # Print the result
         print(f"{bulls} {bull_text}, {cows} {cow_text}")
@@ -155,4 +150,10 @@ def play_bulls_and_cows():
 play_bulls_and_cows()
 
 
+
+# 1. random number contains 0 but not at the beginning - done
+# 2. plural/singular cows and bulls texts - done
+# 3. validate user input - done (bug with string 5 and more letters)
+# 4. plural/singular guess/guesses - done (bug)
+# 5. attempts - valid/invalid - done
 
