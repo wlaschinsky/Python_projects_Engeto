@@ -146,9 +146,13 @@ def play_bulls_and_cows():
         # If the player has guessed the number correctly
         if bulls == 4:
             guessed_correctly = True
-            print(f"Correct! You've guessed the right number in {attempts} guesses!")
+            if attempts == 1:
+             print(f"Correct! You've guessed the right number in {attempts} guess!")
+            else:
+                print(f"Correct! You've guessed the right number in {attempts} guesses!")
 
 # Run the game
 play_bulls_and_cows()
+
 
 
