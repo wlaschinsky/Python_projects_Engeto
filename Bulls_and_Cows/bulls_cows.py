@@ -150,10 +150,3 @@ def play_bulls_and_cows():
 play_bulls_and_cows()
 
 
-
-# 1. random number contains 0 but not at the beginning - done
-# 2. plural/singular cows and bulls texts - done
-# 3. validate user input - done (bug with string 5 and more letters)
-# 4. plural/singular guess/guesses - done (bug)
-# 5. attempts - valid/invalid - done
-
