@@ -14,25 +14,17 @@ discord: samuel_qa
 import random
 
 def generate_secret_number():
-    # Create an empty string to store the result
-    random_number = ""
-    
-    # Create a set to keep track of used digits
-    used_digits = set()
-    
-    # Generate a random digit for the first position (it cannot be 0)
-    first_digit = random.randint(1, 9)  
-    random_number += str(first_digit)
-    used_digits.add(first_digit) 
-    
-    # Generate the remaining 3 digits (can include 0, but must be unique)
-    while len(random_number) < 4:
-        digit = random.randint(0, 9) 
-        
-        # Check if the digit has already been used
-        if digit not in used_digits:
-            random_number += str(digit) 
-            used_digits.add(digit)  
+    """
+    Generates a random 4-digit number where:
+    - The first digit is a number between 1 and 9 (to avoid starting with 0).
+    - The remaining three digits are unique numbers between 0 and 9, but not equal to the first digit.
+
+    Returns:
+        Rrandomly generated 4-digit number.
+    """
+    first_digit = random.choice(range(1, 10))
+    remaining_digits = random.sample([digit for digit in range(10) if digit != first_digit], 3)
+    random_number = str(first_digit) + "".join(map(str, remaining_digits))
     
     print("This print is for debugging:" + " " + random_number)
     return random_number
@@ -50,24 +42,29 @@ Enter a number:
     """)
 
 def validate_user_input(user_input):
+    """
+    Validates the user's input to ensure it follows these rules:
+    - The input contains only digits
+    - The input is exactly 4 digits long
+    - The input does not start with 0
+    - All digits in the input are unique
     
-     # Check if the input contains only digits
+    Returns:
+        True if the input is valid, False otherwise.
+    """
+    
     if not user_input.isdigit():
         print("The input must contain only digits.")
         return False
     
-    # Check if the input is exactly 4 digits
     if len(user_input) != 4:
         print("The number must be exactly 4 digits.")
         return False
-    
-    # Check if the number does not start with 0
+
     if user_input[0] == '0':
         print("The number cannot start with 0.")
         return False
     
-    
-    # Check if the digits are unique
     if len(set(user_input)) != 4:
         print("The digits must be unique.")
         return False
@@ -75,17 +72,25 @@ def validate_user_input(user_input):
     return True
 
 def check_bulls_and_cows(secret_number, user_guess):
+    """
+    Compares the secret number with the user's guess and calculates:
+    - Bulls: Number of digits that are correct and in the correct position
+    - Cows: Number of digits that are correct but in the wrong position
+    
+    Args:
+        secret_number (str): The secret number to be guessed.
+        user_guess (str): The user's guess.
+        
+    Returns:
+        The number of bulls and cows (bulls, cows).
+    """
+    
     bulls = 0
     cows = 0
     
-    # Validate each input
     for digit in range(4):
         if user_guess[digit] == secret_number[digit]:
-            
-            # Right number in the right place
             bulls += 1  
-            
-        # Right number in the wrong place    
         elif user_guess[digit] in secret_number:
             cows += 1   
     
@@ -93,52 +98,42 @@ def check_bulls_and_cows(secret_number, user_guess):
 
 def play_bulls_and_cows():
     
-    # Generate a secret number
-    secret_number = generate_secret_number()
+    """
+    Main function that runs the Bulls and Cows game:
+    - Generates a secret number
+    - Prompts the user for guesses
+    - Validates each guess
+    - Provides feedback with the number of bulls and cows
+    - Ends when the user guesses the correct number
+    """
     
-    # Display the welcome message
+    secret_number = generate_secret_number()
     welcome_message()
     
-    # Inicialization of variables
     attempts = 0
-    
-    # At the start of the game, the player has not guessed the number yet
     guessed_correctly = False   
     
-    # Loop for the game to continue until the player guesses the number
     while not guessed_correctly:
-        
-        # Ask the player for a guess
         user_guess = input("Enter your guess: ")
-        
-        # Increase the number of (valid and invalid) attempts
         attempts += 1
         
-        # Validate the user input
         if not validate_user_input(user_guess):
-            
-            # If the input is not valid, ask the player for another guess
             continue    
         
-        # Count the number of bulls and cows
         bulls, cows = check_bulls_and_cows(secret_number, user_guess)
         
-        # Define the text for the number of bulls
         if bulls == 1:
             bull_text = "bull"  
         else:
             bull_text = "bulls"  
             
-        # Define the text for the number of cows
         if cows == 1:
             cow_text = "cow"  
         else:
             cow_text = "cows" 
 
-        # Print the result
         print(f"{bulls} {bull_text}, {cows} {cow_text}")
         
-        # If the player has guessed the number correctly
         if bulls == 4:
             guessed_correctly = True
             if attempts == 1:
